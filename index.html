@@ -19,13 +19,16 @@
     <script src="./lib/js/jquery-1.12.4.min.js"></script>
     <script src="./lib/js/jquery.fullpage.js"></script>
     <script src="./lib/js/gsap.min.js"></script>
+    <script src="./lib/js/ScrollTrigger.min.js"></script>
     <script src="./lib/js/swiper-bundle.min.js"></script>
 
     <script src="./js/custom.js?ver=1.0"></script>
 </head>
 
 <body>
-
+    <div id="cursor">
+        <div class="cursor__inner"></div>
+    </div>
     <div class="wrapper">
         <header id="header">
             <h1>
@@ -60,17 +63,16 @@
             </aside>
         </header>
         <section class="section intro">
+            <em class="open_cover"></em>
             <h2>2025 hyeon's portfolio</h2>
-            <div class="line"></div>
-            <div class="line liner"></div>
+            <div class="line left"></div>
+            <div class="line right"></div>
             <div class="inner">
                 <strong>
-                    simple sharp solid
-                    <div class="line"></div>
+                    SIMPLE SHARP SOLID
                 </strong>
                 <p>사용자와 개발자를 잇는 정확하고 가벼운 웹 퍼블리싱을 지향합니다.</p>
-                <span></span>
-                <em></em>
+                <span class="open_line"></span>
             </div>
         </section>
         <section class="section portfolio portfolio01" style="--color: #a72b2a; --colors: #746661">
@@ -80,44 +82,43 @@
                     <strong>LX 하우시스</strong>
                     <ul>
                         <li>
-                            <em>TYPE</em>
-                            <p>개인작업 100%, 모바일반응형(768px)</p>
+                            <em>Type</em>
+                            <p>Responsive web(768px)</p>
                         </li>
                         <li>
-                            <em>TOOLS</em>
+                            <em>Tools</em>
                             <p>HTML5, CSS3, javaScript, JQuery, Swiper</p>
                         </li>
                         <li>
-                            <em>COLOR</em>
+                            <em>Color</em>
                             <p class="color">
-                                <span style="background: #a72b2a;">주색</span>
-                                <span style="background: #746661;">보조색</span>
+                                <span style="background: var(--color);">주색</span>
+                                <span style="background: var(--colors);">보조색</span>
                                 <span style="background: #956e5e;">포인트색</span>
                             </p>
                         </li>
                         <li>
-                            <em>INFO</em>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi optio vero
-                                quam, alias quo consequatur. Obcaecati voluptas pariatur perferendis provident quas
-                                magni nostrum eligendi illum? Repudiandae quos aspernatur quis.</p>
+                            <em>Info</em>
+                            <p>사용자 중심의 UX/UI를 고려한 인테리어 브랜드 웹사이트 클론 프로젝트입니다.
+                                swiper slide의 기능구현(슬라이드 연동, 페이지네이션 호버시 슬라이드 이동) 중심으로 트레이닝을 하였습니다.
+                            </p>
                         </li>
                     </ul>
                     <div class="lnk">
                         <a href="https://h-noye.github.io/LX_housys/" target="_blank" class="btn_web btn">
-                            <span>Wep Site</span>
-                            <i></i>
+                            <span>web Site</span>
                         </a>
-                        <a href="" target="_blank" class="btn_photo btn">
+                        <a href="https://www.figma.com/design/TvB53y0YHUbc8dSzFOPp1o/LX%ED%95%98%EC%9A%B0%EC%8B%9C%EC%8A%A4?node-id=0-1&p=f&t=Uo86a4CmDCqQjrZB-0"
+                            target="_blank" class="btn_photo btn">
                             <span>Figma</span>
-                            <i></i>
                         </a>
                     </div>
                 </div>
-                <div class="mokup">
+                <a href="https://h-noye.github.io/LX_housys/" target="_blank" class="mokup">
                     <div class="case">
                         <img src="./images/portfolio01.jpg" alt="portfolio screenshot">
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <section class="section portfolio portfolio02" style="--color: #00b59b; --colors: #25abff">
@@ -127,35 +128,31 @@
                     <strong>위캔디오</strong>
                     <ul>
                         <li>
-                            <em>TYPE</em>
-                            <p>개인작업 100%, 모바일반응형(768px)</p>
+                            <em>Type</em>
+                            <p>Responsive web(768px)</p>
                         </li>
                         <li>
-                            <em>TOOLS</em>
+                            <em>Tools</em>
                             <p>HTML5, CSS3, javaScript, JQuery, Swiper, Aos</p>
                         </li>
                         <li>
-                            <em>COLOR</em>
+                            <em>Color</em>
                             <p class="color">
-                                <span style="background: #00b59b;">주색</span>
-                                <span style="background: #25abff;">보조색</span>
+                                <span style="background: var(--color);">주색</span>
+                                <span style="background: var(--colors);">보조색</span>
                             </p>
                         </li>
                         <li>
-                            <em>INFO</em>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi optio vero
-                                quam, alias quo consequatur. Obcaecati voluptas pariatur perferendis provident quas
-                                magni nostrum eligendi illum? Repudiandae quos aspernatur quis.</p>
+                            <em>Info</em>
+                            <p>다양한 애니메이션 효과를 사용하여 트레이닝한 웹 사이트 클론 프로젝트 입니다.</p>
                         </li>
                     </ul>
                     <div class="lnk">
                         <a href="http://cyb02030579.dothome.co.kr/" target="_blank" class="btn_web btn">
-                            <span>Wep Site</span>
-                            <i></i>
+                            <span>web Site</span>
                         </a>
                         <a href="" target="_blank" class="btn_photo btn">
                             <span>Figma</span>
-                            <i></i>
                         </a>
                     </div>
                 </div>
@@ -166,42 +163,40 @@
                 </div>
             </div>
         </section>
-        <section class="section portfolio portfolio03" style="--color: #1c5b62; --colors: #1c5b62">
+        <section class="section portfolio portfolio03" style="--color: #1c5b62; --colors: #000000">
             <div class="inner flx">
                 <div class="desc">
                     <h2>KYNH</h2>
                     <strong>가야노인전문요양원</strong>
                     <ul>
                         <li>
-                            <em>TYPE</em>
-                            <p>개인작업 100%, 모바일반응형(768px)</p>
+                            <em>Type</em>
+                            <p>Responsive web(768px)</p>
                         </li>
                         <li>
-                            <em>TOOLS</em>
+                            <em>Tools</em>
                             <p>HTML5, CSS3, javaScript, JQuery, Swiper</p>
                         </li>
                         <li>
-                            <em>COLOR</em>
+                            <em>Color</em>
                             <p class="color">
-                                <span style="background: #1c5b62;">주색</span>
-                                <span style="background: #1c5b6221;">보조색</span>
+                                <span style="background: var(--color);">주색</span>
+                                <span style="background: var(--colors);">보조색</span>
                             </p>
                         </li>
                         <li>
-                            <em>INFO</em>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi optio vero
-                                quam, alias quo consequatur. Obcaecati voluptas pariatur perferendis provident quas
-                                magni nostrum eligendi illum? Repudiandae quos aspernatur quis.</p>
+                            <em>Info</em>
+                            <p>연령대가 높은 점을 유의하여 텍스트 가독성 및 크기, 여러 페이지 이동을 최소화 하고 메인 페이지에서 필요한 정보를 최대한 얻을 수 있게 리 디자인 프로젝트
+                                입니다.</p>
                         </li>
                     </ul>
                     <div class="lnk">
                         <a href="https://h-noye.github.io/kynh/" target="_blank" class="btn_web btn">
-                            <span>Wep Site</span>
-                            <i></i>
+                            <span>web Site</span>
                         </a>
-                        <a href="" target="_blank" class="btn_photo btn">
+                        <a href="https://www.figma.com/design/Q27B9OKyucY3eZWzZCF8VB/%EA%B0%80%EC%95%BC%EB%85%B8%EC%9D%B8%EC%A0%84%EB%AC%B8%EC%9A%94%EC%96%91%EC%9B%90?node-id=0-1&t=9iWAuhpyo8lZNfve-1"
+                            target="_blank" class="btn_photo btn">
                             <span>Figma</span>
-                            <i></i>
                         </a>
                     </div>
                 </div>
@@ -219,35 +214,33 @@
                     <strong>투썸플레이스</strong>
                     <ul>
                         <li>
-                            <em>TYPE</em>
-                            <p>개인작업 100%, 모바일반응형(768px)</p>
+                            <em>Type</em>
+                            <p>Responsive web(768px)</p>
                         </li>
                         <li>
-                            <em>TOOLS</em>
+                            <em>Tools</em>
                             <p>HTML5, CSS3, javaScript, JQuery, Swiper</p>
                         </li>
                         <li>
-                            <em>COLOR</em>
+                            <em>Color</em>
                             <p class="color">
-                                <span style="background: #000000;">주색</span>
-                                <span style="background: #d50037e6;">보조색</span>
+                                <span style="background: var(--color);">주색</span>
+                                <span style="background: var(--colors);">보조색</span>
                             </p>
                         </li>
                         <li>
-                            <em>INFO</em>
+                            <em>Info</em>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi optio vero
                                 quam, alias quo consequatur. Obcaecati voluptas pariatur perferendis provident quas
                                 magni nostrum eligendi illum? Repudiandae quos aspernatur quis.</p>
                         </li>
                     </ul>
                     <div class="lnk">
-                        <a href="https://h-noye.github.io/kynh/" target="_blank" class="btn_web btn">
-                            <span>Wep Site</span>
-                            <i></i>
+                        <a href="https://h-noye.github.io/twosome/" target="_blank" class="btn_web btn">
+                            <span>web Site</span>
                         </a>
                         <a href="" target="_blank" class="btn_photo btn">
                             <span>Figma</span>
-                            <i></i>
                         </a>
                     </div>
                 </div>
@@ -265,35 +258,31 @@
                     <strong>청담우리동물병원</strong>
                     <ul>
                         <li>
-                            <em>TYPE</em>
-                            <p>개인작업 100%, 모바일반응형(768px)</p>
+                            <em>Type</em>
+                            <p>Responsive web(768px)</p>
                         </li>
                         <li>
-                            <em>TOOLS</em>
+                            <em>Tools</em>
                             <p>HTML5, CSS3, javaScript, JQuery, Swiper, 그누보드5</p>
                         </li>
                         <li>
-                            <em>COLOR</em>
+                            <em>Color</em>
                             <p class="color">
-                                <span style="background: #2455c5;">주색</span>
-                                <span style="background: #a4d1ff;">보조색</span>
+                                <span style="background: var(--color);">주색</span>
+                                <span style="background: var(--colors);">보조색</span>
                             </p>
                         </li>
                         <li>
-                            <em>INFO</em>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe excepturi optio vero
-                                quam, alias quo consequatur. Obcaecati voluptas pariatur perferendis provident quas
-                                magni nostrum eligendi illum? Repudiandae quos aspernatur quis.</p>
+                            <em>Info</em>
+                            <p>그누보드를 활용하여 서브페이지 조립 및 게시판을 사용할 수 있도록 트레이닝한 프로젝트입니다.</p>
                         </li>
                     </ul>
                     <div class="lnk">
                         <a href="https://h-noye.github.io/kynh/" target="_blank" class="btn_web btn">
-                            <span>Wep Site</span>
-                            <i></i>
+                            <span>web Site</span>
                         </a>
                         <a href="" target="_blank" class="btn_photo btn">
                             <span>Figma</span>
-                            <i></i>
                         </a>
                     </div>
                 </div>
@@ -304,8 +293,129 @@
                 </div>
             </div>
         </section>
-        <section class="section training">training</section>
-        <section class="section profile">profile</section>
+        <section class="section training">
+            <h2>Training</h2>
+            <div class="inner">
+                <a href="https://h-noye.github.io/training01/" target="_blank" class="itm itm01">
+                    <figure>
+                        <img src="./images/training01.jpg" alt="training screenshot">
+                    </figure>
+                    <dl>
+                        <dt>우마이미세</dt>
+                        <dd>Fullpage실습</dd>
+                        <dd>Photoshop 이미지 편집</dd>
+                        <dd>Css 애니메이션 활용</dd>
+                        <dd>JavaScript 활용</dd>
+                    </dl>
+                </a>
+                <a href="http://cyb020305.dothome.co.kr/" target="_blank" class="itm itm02">
+                    <figure>
+                        <img src="./images/training02.jpg" alt="training screenshot">
+                    </figure>
+                    <dl>
+                        <dt>깔끄미 청소</dt>
+                        <dd>그누보드 활용하여 게시판 페이지 활성화</dd>
+                        <dd>그누보드 테마 추가</dd>
+                        <dd>PHP 실습</dd>
+                    </dl>
+                </a>
+                <a href="https://h-noye.github.io/training03/" target="_blank" class="itm itm03">
+                    <figure>
+                        <img src="./images/training03.jpg" alt="training screenshot">
+                    </figure>
+                    <dl>
+                        <dt>독도 전시관</dt>
+                        <dd>Aos 활용</dd>
+                        <dd>변수활용하여 footer text 애니메이션 실습</dd>
+                        <dd>JavaScript 활용</dd>
+                        <dd>Swiper slide 실습(slide parallax effect, slide controller)</dd>
+                    </dl>
+                </a>
+                <a href="https://h-noye.github.io/training04/" target="_blank" class="itm itm04">
+                    <figure>
+                        <img src="./images/training04.jpg" alt="training screenshot">
+                    </figure>
+                    <dl>
+                        <dt>코지하우스</dt>
+                        <dd>다양한 Swiper slide 방식 활용</dd>
+                        <dd>기본 layout 실습</dd>
+                    </dl>
+                </a>
+                <a href="https://h-noye.github.io/training07/" target="_blank" class="itm itm05">
+                    <figure>
+                        <img src="./images/training07.jpg" alt="training screenshot">
+                    </figure>
+                    <dl>
+                        <dt>현대 엘리베이터</dt>
+                        <dd>팝업창 실습</dd>
+                        <dd>Swiper Slide 연동 실습</dd>
+                        <dd>JavaScript 활용</dd>
+                    </dl>
+                </a>
+                <a href="https://h-noye.github.io/training06/" target="_blank" class="itm itm05">
+                    <figure>
+                        <img src="./images/training06.jpg" alt="training screenshot">
+                    </figure>
+                    <dl>
+                        <dt>순곱이네</dt>
+                        <dd>Side Menu layout 실습</dd>
+                        <dd>Swiper Slide 연동 실습</dd>
+                        <dd>JavaScript 활용</dd>
+                    </dl>
+                </a>
+            </div>
+        </section>
+        <section class="section profile">
+            <h2>Profile</h2>
+            <div class="inner flx">
+                <div class="itm itm01">
+                    <strong>About Me</strong>
+                    <dl>
+                        <dt>Name</dt>
+                        <dd>김현수</dd>
+                    </dl>
+                    <dl>
+                        <dt>Phone</dt>
+                        <dd><a href="tel:010-1234-1234">010-1234-1234</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>Mail</dt>
+                        <dd>cyb020305@naver.com</dd>
+                    </dl>
+                    <dl>
+                        <dt>Github</dt>
+                        <dd><a href="https://github.com/H-noye" target="_blank">https://github.com/H-noye</a></dd>
+                    </dl>
+                </div>
+                <div class="itm itm02">
+                    <strong>Exprience</strong>
+                    <dl>
+                        <dt>(주)하이스텐</dt>
+                        <dd>2021.01 ~ 2024.11(3년 11개월 근무)</dd>
+                        <dd>생산부 생산관리파트 담당</dd>
+                    </dl>
+                    <dl>
+                        <dt>스마트 웹디자인 UI/UX 반응형 웹 퍼블리셔 양성 과정</dt>
+                        <dd>2025.03 ~ 2025.07 (수료)</dd>
+                    </dl>
+                </div>
+                <div class="itm itm03">
+                    <strong>License</strong>
+                    <dl>
+                        <dt>1종 운전 면허증</dt>
+                        <dd>2020.04 취득</dd>
+                    </dl>
+                    <dl>
+                        <dt>피복 아크 용접 기능사</dt>
+                        <dd>2020.04 취득</dd>
+                    </dl>
+                    <dl>
+                        <dt>특수 용접 기능사</dt>
+                        <dd>2020.04 취득</dd>
+                    </dl>
+                </div>
+            </div>
+        </section>
         <footer id="footer">
             <address class="blind">
                 &copy; hyeon.

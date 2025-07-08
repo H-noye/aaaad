@@ -16,7 +16,36 @@ html {
 body {
     color: var(--white-color);
     font-size: 1.6rem;
+}
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+#cursor .cursor__inner {
+    width: 8rem;
+    height: 8rem;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+#cursor .cursor__inner.on::before {
+    content: "click";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-transform: uppercase;
+    color: var(--black-color);
+}
+
+#cursor .cursor__inner.on {
+    background: rgba(255, 255, 255, 0.2);
 }
 
 .inner {
@@ -42,6 +71,7 @@ body {
     height: 4.8rem;
     background: var(--black-color);
     font-weight: 300;
+    border-radius: 8px;
     overflow: hidden;
     transition: 0.4s;
 }
@@ -72,4 +102,23 @@ body {
 
 .btn:hover span {
     transform: translate(0, -5.6rem);
+}
+
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(0, 5.6rem);
+    width: 4rem;
+    height: 2.4rem;
+    background: var(--color);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.btn:hover::after {
+    transform: translate(50%, -50%);
 }
