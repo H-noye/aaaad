@@ -24,9 +24,9 @@ $(function () {
 
         tl
             .from({}, {})
-            .from('.intro span', { width: 0, duration: 1 })
+            .from('.intro span', { width: 0, duration: 2 })
             .to('.intro span', { opacity: 0 })
-            .to('.intro em', { opacity: 1, top: 0, height: '100%', background: '#000', duration: 1 })
+            .to('.intro em', { opacity: 1, top: 0, height: '100%', background: '#000', duration: 1 }, '<')
             .from('.intro h2', { y: 100, opacity: 0 })
             .from('.intro strong', { y: 100, opacity: 0 })
             .from('.intro p', { y: 100, opacity: 0 })
@@ -107,12 +107,6 @@ $(function () {
         $cursor.css("transform", `translate3d(${pos.x}px, ${pos.y}px, 0)`);
         requestAnimationFrame(loop);
     })();
-
-    // const $cursor = $("#cursor");
-
-    // $(window).on("mousemove", e => {
-    //     $cursor.css("transform", `translate3d(${e.clientX}px, ${e.clientY}px, 0)`);
-    // });
 
     $(".section img").hover(function () {
         $("#cursor .cursor__inner").addClass('on');
