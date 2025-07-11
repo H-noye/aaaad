@@ -1,17 +1,38 @@
 $(function () {
 
-    const tl = gsap.timeline();
+    let tl;
 
-    tl
-        .from({}, {})
-        .from('.intro span', { width: 0, duration: 2 })
-        .to('.intro span', { rotate: 90 })
-        .to('.intro span', { opacity: 0 })
-        .to('.intro em', { opacity: 1, left: 0, width: '100vw', background: '#000', duration: 1 }, '<')
-        .from('.intro h2', { y: 100, opacity: 0 })
-        .from('.intro strong', { y: 100, opacity: 0 })
-        .from('.intro p', { y: 100, opacity: 0 })
-        .to('.intro .line', { opacity: 1 })
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 769px)", () => {
+        tl = gsap.timeline();
+
+        tl
+            .from({}, {})
+            .from('.intro span', { width: 0, duration: 2 })
+            .to('.intro span', { rotate: 90 })
+            .to('.intro span', { opacity: 0 })
+            .to('.intro em', { opacity: 1, left: 0, width: '100%', background: '#000', duration: 1 }, '<')
+            .from('.intro h2', { y: 100, opacity: 0 })
+            .from('.intro strong', { y: 100, opacity: 0 })
+            .from('.intro p', { y: 100, opacity: 0 })
+            .to('.intro .line', { opacity: 1 });
+    });
+
+    mm.add("(max-width: 768px)", () => {
+        tl = gsap.timeline();
+
+        tl
+            .from({}, {})
+            .from('.intro span', { width: 0, duration: 1 })
+            .to('.intro span', { opacity: 0 })
+            .to('.intro em', { opacity: 1, top: 0, height: '100%', background: '#000', duration: 1 })
+            .from('.intro h2', { y: 100, opacity: 0 })
+            .from('.intro strong', { y: 100, opacity: 0 })
+            .from('.intro p', { y: 100, opacity: 0 })
+            .to('.intro .line', { opacity: 1 });
+    });
+
 
 
     $('.wrapper').fullpage({
@@ -35,8 +56,10 @@ $(function () {
 
             if (idx == 1) {
                 $('#footer .to_top').removeClass('on');
+                $('#header .cover_btn').addClass('off');
             } else {
                 $('#footer .to_top').addClass('on');
+                $('#header .cover_btn').removeClass('off');
             }
         },
 
@@ -55,6 +78,20 @@ $(function () {
     $('#header .cover').on('wheel', function (e) {
         e.stopPropagation();
     })
+
+    const training_slide = new Swiper('.training_slide', {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        navigation: {
+            nextEl: '.training .arrows .next',
+            prevEl: '.training .arrows .prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 6,
+            },
+        },
+    });
 
     const $cursor = $("#cursor");
     let mouse = { x: -100, y: -100 }, pos = { x: 0, y: 0 }, speed = 0.1;
