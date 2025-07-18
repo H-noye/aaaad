@@ -77,7 +77,8 @@ body {
     width: 0;
     height: 0;
     z-index: 998;
-    background: var(--black-color);
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(1.6rem);
     border-radius: 200%;
     overflow: hidden;
     transition: 0.8s;
@@ -273,6 +274,16 @@ body {
     opacity: 0;
 }
 
+.intro h3 {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.5;
+}
+
 @media (max-width:768px) {
     .intro h2 {
         top: 1.6rem;
@@ -322,6 +333,12 @@ body {
         right: 0;
         height: 1px;
         width: auto;
+    }
+
+    .intro h3 {
+        position: absolute;
+        bottom: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -474,7 +491,7 @@ body {
 
     .portfolio .title {
         margin-left: 0;
-        margin-bottom: 2.4rem;
+        margin-bottom: 1.6rem;
         text-align: center;
     }
 
@@ -498,7 +515,7 @@ body {
     .portfolio .bottom {
         flex-direction: column;
         align-items: center;
-        gap: 1.6rem;
+        gap: 0.8rem;
     }
 
     .portfolio .mokup {
@@ -509,13 +526,13 @@ body {
 
     .portfolio .info {
         margin-top: 0;
+        gap: 0.8rem;
     }
 
     .portfolio ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8rem 0;
-        margin-bottom: 1.6rem;
     }
 
     .portfolio ul li {
@@ -674,6 +691,19 @@ body {
     display: none;
 }
 
+.profile address {
+    position: absolute;
+    bottom: 8rem;
+    left: 8rem;
+    font-weight: 100;
+    opacity: 0;
+}
+
+.profile.on address {
+    opacity: 1;
+    transition: 0.8s 1.4s;
+}
+
 @media (max-width:768px) {
     .training .inner {
         grid-template-columns: repeat(2, 1fr);
@@ -759,18 +789,19 @@ body {
     }
 
     .profile .itm dl~dl {
-        margin-top: 1.6rem;
+        margin-top: 0.8rem;
     }
 
-    .profile .itm dl dt {
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 2.4rem;
-        white-space: wrap;
+    .training .itm dl dt {
+        font-size: 3.2rem;
+        font-weight: 200;
     }
 
     .profile .itm dl dt {
         margin-bottom: 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        white-space: wrap;
     }
 
     .training .itm dl dt::before,
@@ -778,12 +809,9 @@ body {
         display: none;
     }
 
+    .training .itm dl dd,
     .profile .itm dl dd {
         font-size: 1.4rem;
-    }
-
-    .profile .itm dl dd~dd {
-        margin-top: 0.4rem;
     }
 
     .profile .itm dl dd~dd {
@@ -805,25 +833,24 @@ body {
     .training .arrows button {
         width: 6.4rem;
         height: 6.4rem;
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.75);
         border-radius: 50%;
         transition: 0.4s;
     }
 
     .training .arrows button.swiper-button-disabled {
-        opacity: 0.25;
+        opacity: 0.1;
     }
 
     .training .arrows button svg {
         vertical-align: -8px;
     }
-}
 
-#footer address {
-    position: fixed;
-    bottom: 8rem;
-    left: 8rem;
-    z-index: 999;
+    .profile address {
+        bottom: 1.6rem;
+        left: 1.6rem;
+        font-size: 1.2rem;
+    }
 }
 
 #footer .to_top {
@@ -852,6 +879,8 @@ body {
     #footer .to_top {
         bottom: 0;
         right: 1.6rem;
+        width: 2.4rem;
+        height: 2.4rem;
     }
 
     #footer .to_top.on {

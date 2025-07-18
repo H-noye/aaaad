@@ -16,6 +16,7 @@ $(function () {
             .from('.intro h2', { y: 100, opacity: 0 })
             .from('.intro strong', { y: 100, opacity: 0 })
             .from('.intro p', { y: 100, opacity: 0 })
+            .from('.intro h3', { y: 100, opacity: 0 })
             .to('.intro .line', { opacity: 1 });
     });
 
@@ -30,6 +31,7 @@ $(function () {
             .from('.intro h2', { y: 100, opacity: 0 })
             .from('.intro strong', { y: 100, opacity: 0 })
             .from('.intro p', { y: 100, opacity: 0 })
+            .from('.intro h3', { y: 100, opacity: 0 })
             .to('.intro .line', { opacity: 1 });
     });
 
