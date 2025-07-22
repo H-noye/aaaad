@@ -9,6 +9,11 @@
     --black-color: #000000;
 }
 
+::selection {
+    background: var(--white-color);
+    color: var(--black-color);
+}
+
 html {
     font-size: 62.5%;
 }
@@ -107,23 +112,4 @@ body {
 
 .btn:hover span {
     transform: translate(0, -5.6rem);
-}
-
-
-.btn::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(0, 5.6rem);
-    width: 4rem;
-    height: 2.4rem;
-    background: var(--color);
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    z-index: -1;
-    transition: 0.4s;
-}
-
-.btn:hover::after {
-    transform: translate(50%, -50%);
 }
