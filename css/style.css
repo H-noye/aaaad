@@ -175,6 +175,7 @@ body {
     left: 8rem;
     font-weight: 100;
     overflow: hidden;
+    opacity: 0;
     z-index: 999;
 }
 
@@ -306,6 +307,7 @@ body {
     text-align: center;
     line-height: 1.5;
     overflow: hidden;
+    opacity: 0;
 }
 
 .intro h3 em {
@@ -318,7 +320,6 @@ body {
         left: 3.2rem;
     }
 
-
     .intro .txt strong {
         font-size: 12rem;
         white-space: wrap;
@@ -328,10 +329,6 @@ body {
         max-width: calc(100% - 3.2rem);
         text-align: center;
         white-space: wrap;
-    }
-
-    .intro .line::after {
-        bottom: 1.6rem;
     }
 
     .intro .open_line {
@@ -358,6 +355,10 @@ body {
 
     .intro .txt .bg {
         opacity: 0;
+    }
+
+    .intro .line::after {
+        bottom: 1.6rem;
     }
 
     .intro h3 {
