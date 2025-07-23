@@ -188,7 +188,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden;
 }
 
 .intro .txt strong {
@@ -319,6 +318,7 @@ body {
     .intro h2 {
         top: 1.6rem;
         left: 3.2rem;
+        overflow: inherit;
     }
 
     .intro .txt strong {
@@ -363,6 +363,7 @@ body {
     }
 
     .intro h3 {
+        overflow: inherit;
         bottom: 6rem;
     }
 }
