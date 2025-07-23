@@ -103,10 +103,10 @@ body {
     width: calc(100% + 4rem);
     text-transform: uppercase;
     color: var(--white-color);
-    font-size: 4rem;
+    font-size: 2.4rem;
     font-weight: 400;
     letter-spacing: 4px;
-    line-height: 1.5;
+    line-height: 2.5;
 }
 
 #header .cover ul>li>a:hover {
@@ -175,7 +175,6 @@ body {
     left: 8rem;
     font-weight: 100;
     overflow: hidden;
-    opacity: 0;
     z-index: 999;
 }
 
@@ -302,11 +301,10 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     font-size: 1.4rem;
-    font-weight: 100;
+    font-weight: 200;
     text-align: center;
     line-height: 1.5;
     overflow: hidden;
-    opacity: 0;
 }
 
 .intro h3 em {
@@ -317,7 +315,6 @@ body {
     .intro h2 {
         top: 1.6rem;
         left: 3.2rem;
-        overflow: inherit;
     }
 
     .intro .txt strong {
@@ -362,7 +359,6 @@ body {
     }
 
     .intro h3 {
-        overflow: inherit;
         bottom: 6rem;
     }
 }
@@ -467,7 +463,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 2.4rem;
+    margin: 2.4rem 0;
 
     opacity: 0;
     transform: translate(4rem, 0);
@@ -490,10 +486,13 @@ body {
     margin-top: 2.4rem;
 }
 
+.portfolio .option .lnk {
+    margin-bottom: 0.8rem;
+}
+
 .portfolio .lnk {
     display: flex;
     gap: 8px;
-    margin-bottom: 2.4rem;
 }
 
 .portfolio .lnk span {
@@ -656,7 +655,7 @@ body {
 }
 
 .training .itm figure {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
     border-radius: 1.6rem;
     overflow: hidden;
 }
@@ -697,10 +696,13 @@ body {
     background: var(--white-color);
 }
 
-.training .itm dl dd,
+.training .itm dl dd {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
 .profile .itm dl dd {
     font-size: 1.6rem;
-    font-weight: 300;
 }
 
 .training .itm dl dd~dd,
